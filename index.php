@@ -12,14 +12,15 @@
 
     <div id="app">
         <section class="container p-3 mb-2 bg-info-subtle mt-5">
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">{{myVar}}</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-            </ul>
-        </div>
+            <div v-for="disc in discs" class="card" style="width: 18rem;">
+                <img :src="disc.poster" class="card-img-top" alt="...">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{disc.title}}</li>
+                    <li class="list-group-item">{{disc.author}}</li>
+                    <li class="list-group-item">{{disc.year}}</li>
+                </ul>
+            </div>
+        
 
         </section>
 
